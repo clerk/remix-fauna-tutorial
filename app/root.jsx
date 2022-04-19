@@ -1,19 +1,25 @@
+import { rootAuthLoader } from '@clerk/remix/ssr.server';
+import { ClerkApp, ClerkCatchBoundary } from '@clerk/remix';
 import {
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+  ScrollRestoration
+} from '@remix-run/react';
 
 export const meta = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
+  charset: 'utf-8',
+  title: 'Movie Emoji Quiz',
+  viewport: 'width=device-width,initial-scale=1'
 });
 
-export default function App() {
+export const loader = args => rootAuthLoader(args);
+
+export const CatchBoundary = ClerkCatchBoundary();
+
+function App() {
   return (
     <html lang="en">
       <head>
@@ -29,3 +35,5 @@ export default function App() {
     </html>
   );
 }
+
+export default ClerkApp(App);
