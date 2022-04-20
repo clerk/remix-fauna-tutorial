@@ -8,6 +8,8 @@
 
 :root {
   --font-body: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, color-emoji;
+  --color-error: #c10500;
+  --color-success: #15750b;
 }
 
 body {
@@ -209,7 +211,11 @@ aside li > a.active {
   text-align: center;
 }
 
+.content h1 {
+  margin-bottom: 8px;
+}
+
 .error > p {
-  color: #c10500;
+  color: var(--color-error);
   font-size: 18px;
 }

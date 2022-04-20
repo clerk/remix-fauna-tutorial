@@ -1,10 +1,22 @@
 import { json } from '@remix-run/node';
-import { Form, useCatch, useLoaderData } from '@remix-run/react';
-import styles from '~/styles/form.css';
+import {
+  Form,
+  useActionData,
+  useCatch,
+  useLoaderData,
+  useTransition
+} from '@remix-run/react';
+import { useEffect, useRef } from 'react';
 import { getClient, getUserById, q } from '../../utils/db.server';
 
+import formStyles from '~/styles/form.css';
+import challengeStyles from '~/styles/challenge.css';
+
 export const links = () => {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: formStyles },
+    { rel: 'stylesheet', href: challengeStyles }
+  ];
 };
 
 export const CatchBoundary = () => {
@@ -62,15 +74,41 @@ export const action = async ({ params, request }) => {
 
 export default function EmojiRoute() {
   const { emoji, username } = useLoaderData();
+  const data = useActionData();
+  const transition = useTransition();
+  const ref = useRef();
+
+  useEffect(() => {
+    if (transition.type == 'normalLoad') {
+      ref.current && ref.current.reset();
+    }
+  }, [transition]);
 
   return (
     <div>
       <span className="emoji">{emoji}</span>
       <address className="author">Submitted by {username}</address>
-      <Form method="post" autoComplete="off">
+      <Form ref={ref} method="post" autoComplete="off">
         <label htmlFor="guess">What movie is this?</label>
-        <input id="guess" type="text" name="guess" required />
+        <input
+          id="guess"
+          type="text"
+          name="guess"
+          placeholder="Enter movie title..."
+          required
+        />
+        {data?.guessed ? (
+          <p className={`message message--${data.guessed}`}>{data.message}</p>
+        ) : null}
         <button className="submit-btn">Submit guess</button>
+        {data?.guessed === 'incorrect' ? (
+          <div className="reveal">
+            <button className="reveal-btn" type="button">
+              Reveal answer
+            </button>
+            <span className="reveal-text">{data?.answer}</span>
+          </div>
+        ) : null}
       </Form>
     </div>
   );
