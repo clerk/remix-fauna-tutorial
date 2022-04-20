@@ -1,10 +1,23 @@
 import { json } from '@remix-run/node';
-import { Form, useLoaderData } from '@remix-run/react';
+import { Form, useCatch, useLoaderData } from '@remix-run/react';
 import styles from '~/styles/form.css';
 import { getClient, getUserById, q } from '../../utils/db.server';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: styles }];
+};
+
+export const CatchBoundary = () => {
+  const caught = useCatch();
+
+  return (
+    <div className="error">
+      <h1>
+        {caught.status} - {caught.statusText}
+      </h1>
+      <p>{caught.data}</p>
+    </div>
+  );
 };
 
 export const loader = async ({ params, request }) => {
@@ -51,7 +64,7 @@ export default function EmojiRoute() {
   const { emoji, username } = useLoaderData();
 
   return (
-    <div className="content">
+    <div>
       <span className="emoji">{emoji}</span>
       <address className="author">Submitted by {username}</address>
       <Form method="post" autoComplete="off">
