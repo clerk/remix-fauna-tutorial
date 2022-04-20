@@ -1,0 +1,116 @@
+.emoji {
+  display: block;
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 20px auto 10px;
+}
+
+.author {
+  padding-bottom: 10px;
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  min-width: 280px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.submit-btn {
+  appearance: none;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: #7180AC;
+  border: 1px solid #6575A4;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #6575A4;
+}
+
+.form-field {
+  display: flex;
+  align-items: baseline;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.form-field label {
+  display: block;
+  min-width: 50px;
+  margin: 0 16px 0 0;
+}
+
+.form-validation-error {
+  color: var(--color-error);
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.message {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.message--correct {
+  color: var(--color-success);
+}
+
+.message--incorrect {
+  color: var(--color-error);
+}
+
+.reveal {
+  position: relative;
+}
+
+.reveal-btn {
+  position: relative;
+  z-index: 2;
+  appearance: none;
+  width: 300px;
+  margin: 24px auto;
+  padding: 16px 24px;
+  background: #F5F5F4;
+  border: 1px solid #D8D8D4;
+  transition: opacity 1.5s ease;
+  cursor: help;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.reveal-btn:hover {
+  opacity: 0;
+}
+
+.reveal-text {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+}

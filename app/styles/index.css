@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "color-emoji";
+  src: local("Apple Color Emoji"),
+       local("Segoe UI Emoji"), 
+       local("Segoe UI Symbol"),
+       local("Noto Color Emoji");
+}
+
+:root {
+  --font-body: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, color-emoji;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fd890f;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+} 
+
+.actions > a {
+  margin: 0 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.actions > a:hover,
+.actions > a:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+aside {
+  width: 280px;
+  height: 100%;
+  overflow-y: scroll;
+  flex-shrink: 0;
+  background-color: #F5F5F4;
+  border-right: 1px solid #D8D8D4;
+}
+
+aside h2 {
+  margin: 20px 20px 10px;
+  font-size: 18px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  font-size: 28px;
+}
+
+aside li:not(:last-child) {
+  border-bottom: 1px solid #D8D8D4;
+}
+
+aside li > a {
+  display: block;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+aside li > a:hover,
+aside li > a:focus,
+aside li > a.active {
+  background-color: #ECECEA;
+}
+
+.content {
+  width: 100%;
+  height: calc(100vh - 40px);
+  padding: 40px 20px 0;
+  background-color: #e5e6e4;
+  text-align: center;
+}
+
+.content h1 {
+  margin-bottom: 8px;
+}
+
+@font-face {
+  font-family: "color-emoji";
+  src: local("Apple Color Emoji"),
+       local("Segoe UI Emoji"), 
+       local("Segoe UI Symbol"),
+       local("Noto Color Emoji");
+}
+
+:root {
+  --font-body: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, color-emoji;
+  --color-error: #c10500;
+  --color-success: #15750b;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fd890f;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+} 
+
+.actions > a {
+  margin: 0 20px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.actions > a:hover,
+.actions > a:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+aside {
+  width: 280px;
+  height: 100%;
+  overflow-y: scroll;
+  flex-shrink: 0;
+  background-color: #F5F5F4;
+  border-right: 1px solid #D8D8D4;
+}
+
+aside h2 {
+  margin: 20px 20px 10px;
+  font-size: 18px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  font-size: 28px;
+}
+
+aside li:not(:last-child) {
+  border-bottom: 1px solid #D8D8D4;
+}
+
+aside li > a {
+  display: block;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+aside li > a:hover,
+aside li > a:focus,
+aside li > a.active {
+  background-color: #ECECEA;
+}
+
+.content {
+  width: 100%;
+  padding: 40px 20px 0;
+  background-color: #e5e6e4;
+  text-align: center;
+}
