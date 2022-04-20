@@ -15,7 +15,7 @@ export const meta = () => ({
   viewport: 'width=device-width,initial-scale=1'
 });
 
-export const loader = args => rootAuthLoader(args);
+export const loader = (args) => rootAuthLoader(args);
 
 export const CatchBoundary = ClerkCatchBoundary();
 
