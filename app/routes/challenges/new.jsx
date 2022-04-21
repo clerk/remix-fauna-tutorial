@@ -13,7 +13,7 @@ export const links = () => {
 const badRequest = (data) => json(data, { status: 400 });
 
 const validateEmoji = (emoji) =>
-  !emoji.trim() || /\P{Extended_Pictographic}/gu.test(emoji)
+  !emoji.trim() || /\p{L}|\p{N}(?!\uFE0F)|\p{Z}/gu.test(emoji)
     ? 'Please enter only emoji'
     : undefined;
 
