@@ -1,10 +1,9 @@
 import { json } from '@remix-run/node';
 import { Outlet, useLoaderData } from '@remix-run/react';
 
-import Header from '../components/header';
-import Sidebar from '../components/sidebar';
+import { Header, Sidebar } from '~/components';
+import { getClient, q } from '~/utils/db.server';
 import styles from '~/styles/index.css';
-import { getClient, q } from '../utils/db.server';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: styles }];

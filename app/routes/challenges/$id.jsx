@@ -7,16 +7,12 @@ import {
   useTransition
 } from '@remix-run/react';
 import { useEffect, useRef } from 'react';
-import { getClient, getUserById, q } from '../../utils/db.server';
 
-import formStyles from '~/styles/form.css';
-import challengeStyles from '~/styles/challenge.css';
+import { getClient, getUserById, q } from '~/utils/db.server';
+import styles from '~/styles/challenge.css';
 
 export const links = () => {
-  return [
-    { rel: 'stylesheet', href: formStyles },
-    { rel: 'stylesheet', href: challengeStyles }
-  ];
+  return [{ rel: 'stylesheet', href: styles }];
 };
 
 export const CatchBoundary = () => {

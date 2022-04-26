@@ -3,8 +3,8 @@ import { getAuth } from '@clerk/remix/ssr.server';
 import { json, redirect } from '@remix-run/node';
 import { Form, useActionData } from '@remix-run/react';
 
-import styles from '~/styles/form.css';
-import { getClient, q } from '../../utils/db.server';
+import { getClient, q } from '~/utils/db.server';
+import styles from '~/styles/challenge.css';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: styles }];

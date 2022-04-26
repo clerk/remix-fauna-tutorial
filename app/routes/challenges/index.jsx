@@ -1,5 +1,6 @@
 import { redirect } from '@remix-run/node';
-import { getClient, q } from '../../utils/db.server';
+
+import { getClient, q } from '~/utils/db.server';
 
 export const loader = async ({ request }) => {
   const client = await getClient(request);
