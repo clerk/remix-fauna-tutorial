@@ -8,9 +8,12 @@ export const getClient = async (request) => {
     return null;
   }
 
-  const secret = await getToken({ template: 'fauna' });
-
-  return new faunadb.Client({ secret });
+  try {
+    const secret = await getToken({ template: 'fauna' });
+    return new faunadb.Client({ secret });
+  } catch (err) {
+    throw err;
+  }
 };
 
 export const q = faunadb.query;
