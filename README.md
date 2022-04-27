@@ -1,19 +1,10 @@
-# Welcome to Remix!
+# Movie Emoji Quiz App
 
-- [Remix Docs](https://remix.run/docs)
+This sample repo is associated with the [Remix, Fauna, and Clerk tutorial](https://clerk.dev/tutorials/build-movie-emoji-quiz-with-remix-fauna-and-clerk).
 
-## Deployment
+You can browse the code and run it locally, or you can check out the [live demo](https://remix-fauna-tutorial.clerk.app).
 
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
-
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
-
-```sh
-npm i -g vercel
-vercel
-```
-
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+<img alt="Remix, Fauna, Clerk tutorial" src="./docs/cover.png" width="550" />
 
 ## Development
 
@@ -31,4 +22,16 @@ npm run dev
 
 Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+## Deployment
+
+After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
+
+If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+
+```sh
+npm i -g vercel
+vercel
+```
+## Contact
+
+If you need support or have anything you would like to ask, please reach out in our [Discord channel](https://discord.com/invite/b5rXHjAg7A). We'd love to chat!
