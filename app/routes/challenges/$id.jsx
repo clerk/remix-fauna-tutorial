@@ -48,7 +48,7 @@ export const loader = async ({ params, request }) => {
   const user = await getUserById(challenge.userId);
   const data = {
     ...challenge,
-    username: user.username
+    username: user.username || 'someone'
   };
 
   return json(data);
